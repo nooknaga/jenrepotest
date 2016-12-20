@@ -1,0 +1,120 @@
+Started by user [8mha:AAAAlh+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzOEgYu/dLi1CL9vNKcHACFIKlWvwAAAA==[0manonymous
+Building in workspace C:\Users\nagaraj.nookala\.jenkins\jobs\Demo\workspace
+ > C:\Program Files\Git\mingw64\libexec\git-core\git.exe rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > C:\Program Files\Git\mingw64\libexec\git-core\git.exe config remote.origin.url https://github.com/nooknaga/Jenkins.git # timeout=10
+Fetching upstream changes from https://github.com/nooknaga/Jenkins.git
+ > C:\Program Files\Git\mingw64\libexec\git-core\git.exe --version # timeout=10
+using .gitcredentials to set credentials
+ > C:\Program Files\Git\mingw64\libexec\git-core\git.exe config --local credential.username nookala.nagaraj@gmail.com # timeout=10
+ > C:\Program Files\Git\mingw64\libexec\git-core\git.exe config --local credential.helper store --file=\"C:\Users\NAGARA~1.NOO\AppData\Local\Temp\git8778049466714233953.credentials\" # timeout=10
+ > C:\Program Files\Git\mingw64\libexec\git-core\git.exe -c core.askpass=true fetch --tags --progress https://github.com/nooknaga/Jenkins.git +refs/heads/*:refs/remotes/origin/*
+ > C:\Program Files\Git\mingw64\libexec\git-core\git.exe config --local --remove-section credential # timeout=10
+ > C:\Program Files\Git\mingw64\libexec\git-core\git.exe rev-parse "refs/remotes/origin/master^{commit}" # timeout=10
+ > C:\Program Files\Git\mingw64\libexec\git-core\git.exe rev-parse "refs/remotes/origin/origin/master^{commit}" # timeout=10
+Checking out Revision 92d2ca22c022bde7c9a4017562c16cdf89bedb69 (refs/remotes/origin/master)
+ > C:\Program Files\Git\mingw64\libexec\git-core\git.exe config core.sparsecheckout # timeout=10
+ > C:\Program Files\Git\mingw64\libexec\git-core\git.exe checkout -f 92d2ca22c022bde7c9a4017562c16cdf89bedb69
+ > C:\Program Files\Git\mingw64\libexec\git-core\git.exe rev-list 92d2ca22c022bde7c9a4017562c16cdf89bedb69 # timeout=10
+[workspace] $ cmd.exe /C '"D:\Personal\LinuxTraining\Maven\apache-maven-3.3.9\bin\mvn.cmd -f DemoDynamicWebProject/pom.xml clean package && exit %%ERRORLEVEL%%"'
+[INFO] Scanning for projects...
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building DemoDynamic 0.0.1-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[8mha:AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ DemoDynamicWebProject ---
+[INFO] Deleting C:\Users\nagaraj.nookala\.jenkins\jobs\Demo\workspace\DemoDynamicWebProject\target
+[INFO] 
+[8mha:AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ DemoDynamicWebProject ---
+[8mha:AAAAYx+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6S2fNly5fzGzauYGBgqihikoFqS8/OK83NS9ZwhNEghAwQwghQWAACwxA+XYgAAAA==[0m[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory C:\Users\nagaraj.nookala\.jenkins\jobs\Demo\workspace\DemoDynamicWebProject\src\main\resources
+[INFO] 
+[8mha:AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ DemoDynamicWebProject ---
+[INFO] Changes detected - recompiling the module!
+[8mha:AAAAYx+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6S2fNly5fzGzauYGBgqihikoFqS8/OK83NS9ZwhNEghAwQwghQWAACwxA+XYgAAAA==[0m[WARNING] File encoding has not been set, using platform encoding Cp1252, i.e. build is platform dependent!
+[INFO] Compiling 1 source file to C:\Users\nagaraj.nookala\.jenkins\jobs\Demo\workspace\DemoDynamicWebProject\target\classes
+[INFO] 
+[8mha:AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ DemoDynamicWebProject ---
+[8mha:AAAAYx+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6S2fNly5fzGzauYGBgqihikoFqS8/OK83NS9ZwhNEghAwQwghQWAACwxA+XYgAAAA==[0m[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory C:\Users\nagaraj.nookala\.jenkins\jobs\Demo\workspace\DemoDynamicWebProject\src\test\resources
+[INFO] 
+[8mha:AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ DemoDynamicWebProject ---
+[INFO] No sources to compile
+[INFO] 
+[8mha:AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ DemoDynamicWebProject ---
+[INFO] No tests to run.
+[INFO] 
+[8mha:AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- maven-war-plugin:2.3:war (default-war) @ DemoDynamicWebProject ---
+[INFO] Packaging webapp
+[INFO] Assembling webapp [DemoDynamicWebProject] in [C:\Users\nagaraj.nookala\.jenkins\jobs\Demo\workspace\DemoDynamicWebProject\target\DemoDynamicWebProject-0.0.1-SNAPSHOT]
+[INFO] Processing war project
+[INFO] Copying webapp resources [C:\Users\nagaraj.nookala\.jenkins\jobs\Demo\workspace\DemoDynamicWebProject\WebContent]
+[INFO] Webapp assembled in [62 msecs]
+[INFO] Building war: C:\Users\nagaraj.nookala\.jenkins\jobs\Demo\workspace\DemoDynamicWebProject\target\DemoDynamicWebProject-0.0.1-SNAPSHOT.war
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 3.155 s
+[INFO] Finished at: 2016-03-17T23:15:30+05:30
+[INFO] Final Memory: 17M/171M
+[INFO] ------------------------------------------------------------------------
+Deploying C:\Users\nagaraj.nookala\.jenkins\jobs\Demo\workspace\DemoDynamicWebProject\target\DemoDynamicWebProject-0.0.1-SNAPSHOT.war to container Tomcat 7.x Remote
+ERROR: Build step failed with exception
+[8mha:AAAAWB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P08vOT+vOD8nVc8DzHWtSE4tKMnMz/PLL0ldFVf2c+b/lb5MDAwVRQxSaBqcITRIIQMEMIIUFgAAckCEiWAAAAA=[0morg.codehaus.cargo.container.ContainerException: Failed to redeploy [C:\Users\nagaraj.nookala\.jenkins\jobs\Demo\workspace\DemoDynamicWebProject\target\DemoDynamicWebProject-0.0.1-SNAPSHOT.war]
+	at org.codehaus.cargo.container.tomcat.internal.AbstractTomcatManagerDeployer.redeploy(AbstractTomcatManagerDeployer.java:189)
+	at hudson.plugins.deploy.CargoContainerAdapter.deploy(CargoContainerAdapter.java:73)
+	at hudson.plugins.deploy.CargoContainerAdapter$1.invoke(CargoContainerAdapter.java:116)
+	at hudson.plugins.deploy.CargoContainerAdapter$1.invoke(CargoContainerAdapter.java:103)
+	at hudson.FilePath.act(FilePath.java:990)
+	at hudson.FilePath.act(FilePath.java:968)
+	at hudson.plugins.deploy.CargoContainerAdapter.redeploy(CargoContainerAdapter.java:103)
+	at hudson.plugins.deploy.DeployPublisher.perform(DeployPublisher.java:61)
+	at hudson.tasks.BuildStepMonitor$3.perform(BuildStepMonitor.java:45)
+	at hudson.model.AbstractBuild$AbstractBuildExecution.perform(AbstractBuild.java:782)
+	at hudson.model.AbstractBuild$AbstractBuildExecution.performAllBuildSteps(AbstractBuild.java:723)
+	at hudson.model.Build$BuildExecution.post2(Build.java:185)
+	at hudson.model.AbstractBuild$AbstractBuildExecution.post(AbstractBuild.java:668)
+	at hudson.model.Run.execute(Run.java:1763)
+	at hudson.model.FreeStyleBuild.run(FreeStyleBuild.java:43)
+	at hudson.model.ResourceController.execute(ResourceController.java:98)
+	at hudson.model.Executor.run(Executor.java:410)
+Caused by: org.codehaus.cargo.container.tomcat.internal.TomcatManagerException: The username you provided is not allowed to use the text-based Tomcat Manager (error 403)
+	at org.codehaus.cargo.container.tomcat.internal.TomcatManager.invoke(TomcatManager.java:555)
+	at org.codehaus.cargo.container.tomcat.internal.TomcatManager.list(TomcatManager.java:686)
+	at org.codehaus.cargo.container.tomcat.internal.TomcatManager.getStatus(TomcatManager.java:699)
+	at org.codehaus.cargo.container.tomcat.internal.AbstractTomcatManagerDeployer.redeploy(AbstractTomcatManagerDeployer.java:174)
+	... 16 more
+Caused by: java.io.IOException: Server returned HTTP response code: 403 for URL: http://10.10.10.103:8080//manager/text/list
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(Unknown Source)
+	at org.codehaus.cargo.container.tomcat.internal.TomcatManager.invoke(TomcatManager.java:544)
+	... 19 more
+org.codehaus.cargo.container.tomcat.internal.TomcatManagerException: The username you provided is not allowed to use the text-based Tomcat Manager (error 403)
+	at org.codehaus.cargo.container.tomcat.internal.TomcatManager.invoke(TomcatManager.java:555)
+	at org.codehaus.cargo.container.tomcat.internal.TomcatManager.list(TomcatManager.java:686)
+	at org.codehaus.cargo.container.tomcat.internal.TomcatManager.getStatus(TomcatManager.java:699)
+	at org.codehaus.cargo.container.tomcat.internal.AbstractTomcatManagerDeployer.redeploy(AbstractTomcatManagerDeployer.java:174)
+	at hudson.plugins.deploy.CargoContainerAdapter.deploy(CargoContainerAdapter.java:73)
+	at hudson.plugins.deploy.CargoContainerAdapter$1.invoke(CargoContainerAdapter.java:116)
+	at hudson.plugins.deploy.CargoContainerAdapter$1.invoke(CargoContainerAdapter.java:103)
+	at hudson.FilePath.act(FilePath.java:990)
+	at hudson.FilePath.act(FilePath.java:968)
+	at hudson.plugins.deploy.CargoContainerAdapter.redeploy(CargoContainerAdapter.java:103)
+	at hudson.plugins.deploy.DeployPublisher.perform(DeployPublisher.java:61)
+	at hudson.tasks.BuildStepMonitor$3.perform(BuildStepMonitor.java:45)
+	at hudson.model.AbstractBuild$AbstractBuildExecution.perform(AbstractBuild.java:782)
+	at hudson.model.AbstractBuild$AbstractBuildExecution.performAllBuildSteps(AbstractBuild.java:723)
+	at hudson.model.Build$BuildExecution.post2(Build.java:185)
+	at hudson.model.AbstractBuild$AbstractBuildExecution.post(AbstractBuild.java:668)
+	at hudson.model.Run.execute(Run.java:1763)
+	at hudson.model.FreeStyleBuild.run(FreeStyleBuild.java:43)
+	at hudson.model.ResourceController.execute(ResourceController.java:98)
+	at hudson.model.Executor.run(Executor.java:410)
+Caused by: java.io.IOException: Server returned HTTP response code: 403 for URL: http://10.10.10.103:8080//manager/text/list
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream0(Unknown Source)
+	at sun.net.www.protocol.http.HttpURLConnection.getInputStream(Unknown Source)
+	at org.codehaus.cargo.container.tomcat.internal.TomcatManager.invoke(TomcatManager.java:544)
+	... 19 more
+Build step 'Deploy war/ear to a container' marked build as failure
+Finished: FAILURE

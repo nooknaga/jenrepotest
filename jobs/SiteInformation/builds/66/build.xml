@@ -1,0 +1,275 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<build>
+  <actions>
+    <hudson.model.ParametersAction>
+      <safeParameters class="sorted-set"/>
+      <parameters>
+        <hudson.model.StringParameterValue>
+          <name>SitePair</name>
+          <description></description>
+          <value>YKT-HRS</value>
+        </hudson.model.StringParameterValue>
+        <hudson.model.StringParameterValue>
+          <name>DCTest</name>
+          <description></description>
+          <value></value>
+        </hudson.model.StringParameterValue>
+        <hudson.model.StringParameterValue>
+          <name>Test</name>
+          <description></description>
+          <value>testing</value>
+        </hudson.model.StringParameterValue>
+      </parameters>
+      <parameterDefinitionNames class="hudson.model.ParametersDefinitionProperty$1">
+        <outer-class>
+          <parameterDefinitions>
+            <org.biouno.unochoice.ChoiceParameter plugin="uno-choice@1.4">
+              <name>SitePair</name>
+              <description></description>
+              <randomName>choice-parameter-688583144922343</randomName>
+              <visibleItemCount>3</visibleItemCount>
+              <script class="org.biouno.unochoice.model.GroovyScript">
+                <script>import groovy.sql.Sql
+
+List nameslist = new ArrayList()
+
+def sql = Sql.newInstance(&quot;jdbc:mysql://localhost:3306/siteinformation&quot;, &quot;root&quot;, &quot;Advent2016!&quot;, &quot;com.mysql.jdbc.Driver&quot;)
+sql.eachRow (&quot;select distinct SitePairName from sitepair;&quot;)
+{
+nameslist &lt;&lt; it.SitePairName
+}
+return nameslist</script>
+                <fallbackScript>return[&apos;Script Error&apos;]</fallbackScript>
+              </script>
+              <projectName>SiteInformation</projectName>
+              <choiceType>PT_SINGLE_SELECT</choiceType>
+              <filterable>false</filterable>
+            </org.biouno.unochoice.ChoiceParameter>
+            <org.biouno.unochoice.DynamicReferenceParameter plugin="uno-choice@1.4">
+              <name>DCTest</name>
+              <description></description>
+              <randomName>choice-parameter-1195180888996813</randomName>
+              <visibleItemCount>8</visibleItemCount>
+              <script class="org.biouno.unochoice.model.GroovyScript">
+                <script>import groovy.sql.Sql
+
+List storefront1 = new ArrayList()
+List storefront2 = new ArrayList()
+
+def (site1, site2) = &quot;${SitePair}&quot;.tokenize(&apos;-&apos;)
+def sql = Sql.newInstance(&quot;jdbc:mysql://localhost:3306/siteinformation&quot;, &quot;root&quot;, &quot;Advent2016!&quot;, &quot;com.mysql.jdbc.Driver&quot;)
+def query1 = &quot;select IPAddress, SiteName, HostName from sfdcinformation where ComponentType like &apos;DC%&apos; and (SiteName like &quot;+&quot;&apos;${site1}&apos;&quot;+&quot; or SiteName like &quot;+&quot;&apos;${site2}&apos;&quot;+&quot;);&quot;
+
+sql.eachRow (query1)
+{
+storefront1 &lt;&lt; it.IPAddress+&quot;  &quot;+it.SiteName+&quot;  &quot;+it.HostName
+
+}
+
+def query2 = &quot;select IPAddress, SiteName, HostName from sfdcinformation where ComponentType like &apos;SF%&apos; and (SiteName like &quot;+&quot;&apos;${site1}&apos;&quot;+&quot; or SiteName like &quot;+&quot;&apos;${site2}&apos;&quot;+&quot;);&quot;
+sql.eachRow (query2)
+{
+storefront2 &lt;&lt; it.IPAddress+&quot;  &quot;+it.SiteName+&quot;  &quot;+it.HostName
+}
+storefront1.addAll(storefront2)
+
+return storefront1</script>
+                <fallbackScript>return[&apos;Script Error&apos;]</fallbackScript>
+              </script>
+              <projectName>SiteInformation</projectName>
+              <parameters class="linked-hash-map">
+                <entry>
+                  <string>jenkinsProject</string>
+                  <hudson.model.FreeStyleProject>
+                    <actions/>
+                    <description></description>
+                    <keepDependencies>false</keepDependencies>
+                    <properties>
+                      <hudson.model.ParametersDefinitionProperty reference="../../../../../../.."/>
+                    </properties>
+                    <scm class="hudson.scm.NullSCM"/>
+                    <canRoam>true</canRoam>
+                    <disabled>false</disabled>
+                    <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+                    <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+                    <triggers/>
+                    <concurrentBuild>false</concurrentBuild>
+                    <builders>
+                      <hudson.plugins.groovy.SystemGroovy plugin="groovy@1.29">
+                        <scriptSource class="hudson.plugins.groovy.StringScriptSource">
+                          <command>import groovy.sql.Sql
+
+def taste = build.buildVariableResolver.resolve(&quot;Test&quot;)
+println &quot;$taste&quot;
+def sitelist = build.buildVariableResolver.resolve(&quot;SitePair&quot;)
+
+List IPs = new ArrayList()
+List sysname = new ArrayList()
+List hatype = new ArrayList()
+List component = new ArrayList()
+List storefront = new ArrayList()
+
+def (site1, site2) = &quot;${sitelist}&quot;.tokenize(&apos;-&apos;)
+def sql = Sql.newInstance(&quot;jdbc:mysql://localhost:3306/siteinformation&quot;, &quot;root&quot;, &quot;Advent2016!&quot;, &quot;com.mysql.jdbc.Driver&quot;)
+def query1 = &quot;select ComponentType, IPAddress, HostName, SiteName, HAType from sfdcinformation where SiteName like &quot;+&quot;&apos;${site1}&apos;&quot;+&quot;;&quot;
+
+sql.eachRow (query1)
+{
+  component &lt;&lt; it.ComponentType
+  IPs &lt;&lt; it.IPAddress
+  sysname &lt;&lt; it.HostName
+  hatype &lt;&lt; it.HAType
+}
+
+def size = component.size()
+for (int j=0; j&lt;size; j++)
+{
+  println component[j]
+  println IPs[j]
+  println sysname[j]
+  println hatype[j]  
+}
+
+def Site1SFServer1
+def Site1SFServer2
+def Site2SFServer1
+def Site2SFServer2
+def Site1DCServer1
+def Site1DCServer2
+def Site2DCServer1
+def Site2DCServer2
+
+
+for (int i=0; i&lt;size; i++)
+{
+  if(hatype[i].equalsIgnoreCase(&quot;Primary&quot;))
+  {
+    if(component[i].equalsIgnoreCase(&quot;SF-01&quot;))
+    {
+      Site1SFServer1 = sysname[i]
+    }
+    else if(component[i].equalsIgnoreCase(&quot;DC-01&quot;))
+    {
+      Site1DCServer1 = sysname[i]
+    }    
+  }
+  else if(hatype[i].equalsIgnoreCase(&quot;Secondary&quot;))
+  {
+     if(component[i].equalsIgnoreCase(&quot;SF-02&quot;))
+    {
+      Site1SFServer2 = sysname[i]
+    }
+    else if(component[i].equalsIgnoreCase(&quot;DC-02&quot;))
+    {
+      Site1DCServer2 = sysname[i]
+    }    
+  }
+}
+
+
+
+
+def query2 = &quot;select ComponentType, IPAddress, HostName, SiteName, HAType from sfdcinformation where SiteName like &quot;+&quot;&apos;${site2}&apos;&quot;+&quot;;&quot;
+sql.eachRow (query2)
+{
+  component &lt;&lt; it.ComponentType
+  IPs &lt;&lt; it.IPAddress
+  sysname &lt;&lt; it.HostName
+  hatype &lt;&lt; it.HAType
+}
+
+def size1 = component.size()
+
+for (int j=size; j&lt;size1; j++)
+{
+  println component[j]
+  println IPs[j]
+  println sysname[j]
+  println hatype[j]  
+}
+for (int i=size; i&lt;size1; i++)
+{
+  if(hatype[i].equalsIgnoreCase(&quot;Primary&quot;))
+  {
+    if(component[i].equalsIgnoreCase(&quot;SF-01&quot;))
+    {
+      Site2SFServer1 = sysname[i]
+    }
+    else if(component[i].equalsIgnoreCase(&quot;DC-01&quot;))
+    {
+      Site2DCServer1 = sysname[i]
+    }    
+  }
+  else if(hatype[i].equalsIgnoreCase(&quot;Secondary&quot;))
+  {
+     if(component[i].equalsIgnoreCase(&quot;SF-02&quot;))
+    {
+      Site2SFServer2 = sysname[i]
+    }
+    else if(component[i].equalsIgnoreCase(&quot;DC-02&quot;))
+    {
+      Site2DCServer2 = sysname[i]
+    }    
+  }
+}
+println &quot;=========================&quot;
+println &quot;$Site1SFServer1&quot;
+println &quot;$Site1SFServer2&quot;
+println &quot;$Site2SFServer1&quot;
+println &quot;$Site2SFServer2&quot;
+println &quot;$Site1DCServer1&quot;
+println &quot;$Site1DCServer2&quot;
+println &quot;$Site2DCServer1&quot;
+println &quot;$Site2DCServer2&quot;
+
+def proc = &quot;C:\Users\nagaraj.nookala\.jenkins\jobs\SiteInformation\workspace\Storefront\SFDC.ps1 -StoreFront1 &quot;+ &quot;$Site1SFServer1 &quot;+ &quot;-StoreFront2 &quot;+ &quot;$Site1SFServer2 &quot;+ &quot;-DeliveryController1 &quot;+ &quot;$Site1DCServer1 &quot;+ &quot;-DeliveryController2 &quot;+ &quot;$Site1DCServer2&quot;.execute()
+proc.wait()</command>
+                        </scriptSource>
+                        <bindings></bindings>
+                        <classpath></classpath>
+                      </hudson.plugins.groovy.SystemGroovy>
+                    </builders>
+                    <publishers/>
+                    <buildWrappers/>
+                  </hudson.model.FreeStyleProject>
+                </entry>
+                <entry>
+                  <string>SitePair</string>
+                  <string>YKT-HRS</string>
+                </entry>
+              </parameters>
+              <referencedParameters>SitePair</referencedParameters>
+              <choiceType>ET_UNORDERED_LIST</choiceType>
+              <omitValueField>false</omitValueField>
+            </org.biouno.unochoice.DynamicReferenceParameter>
+            <hudson.model.StringParameterDefinition>
+              <name>Test</name>
+              <description></description>
+              <defaultValue>testing</defaultValue>
+            </hudson.model.StringParameterDefinition>
+          </parameterDefinitions>
+        </outer-class>
+      </parameterDefinitionNames>
+    </hudson.model.ParametersAction>
+    <hudson.model.CauseAction>
+      <causeBag class="linked-hash-map">
+        <entry>
+          <hudson.model.Cause_-UserIdCause/>
+          <int>1</int>
+        </entry>
+      </causeBag>
+    </hudson.model.CauseAction>
+  </actions>
+  <queueId>34</queueId>
+  <timestamp>1467825117300</timestamp>
+  <startTime>1467825117308</startTime>
+  <result>FAILURE</result>
+  <duration>1352</duration>
+  <charset>windows-1252</charset>
+  <keepLog>false</keepLog>
+  <builtOn></builtOn>
+  <workspace>C:\Users\nagaraj.nookala\.jenkins\jobs\SiteInformation\workspace</workspace>
+  <hudsonVersion>1.651.3</hudsonVersion>
+  <scm class="hudson.scm.NullChangeLogParser"/>
+  <culprits class="com.google.common.collect.EmptyImmutableSortedSet"/>
+</build>

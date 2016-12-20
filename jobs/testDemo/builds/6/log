@@ -1,0 +1,8 @@
+Started by user [8mha:AAAAlh+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzOEgYu/dLi1CL9vNKcHACFIKlWvwAAAA==[0manonymous
+Building in workspace C:\Users\nagaraj.nookala\.jenkins\jobs\testDemo\workspace
+[workspace] $ C:\groovy-2.4.7\bin\groovy.bat C:\Users\nagaraj.nookala\.jenkins\jobs\testDemo\workspace\hudson4021954567893682280.groovy
+Caught: java.lang.ClassNotFoundException: com.mysql.jdbc.Driver
+java.lang.ClassNotFoundException: com.mysql.jdbc.Driver
+	at hudson4021954567893682280.run(hudson4021954567893682280.groovy:8)
+Build step 'Execute Groovy script' marked build as failure
+Finished: FAILURE

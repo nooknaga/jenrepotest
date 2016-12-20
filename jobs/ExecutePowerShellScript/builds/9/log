@@ -1,0 +1,23 @@
+Started by upstream project "[8mha:AAAArB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzpEgZF/az8JH3nTKD2inj31LzUssR4/6LkjNTikqLEksz8PH0AvPoG8dYAAAA=[0mCitrix_Geneva_Orchestration" build number [8mha:AAAArB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLQIwSBiX9rPwkfedMoPaKePfUvNSyxHj/ouSM1OKSosSSzPw8fUsAv1RBBtcAAAA=[0m9
+originally caused by:
+ Started by user [8mha:AAAAlh+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzOEgYu/dLi1CL9vNKcHACFIKlWvwAAAA==[0manonymous
+[EnvInject] - Loading node environment variables.
+FATAL: null
+[8mha:AAAAWB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P08vOT+vOD8nVc8DzHWtSE4tKMnMz/PLL0ldFVf2c+b/lb5MDAwVRQxSaBqcITRIIQMEMIIUFgAAckCEiWAAAAA=[0mjava.lang.NullPointerException
+	at hudson.model.ParametersDefinitionProperty$1.size(ParametersDefinitionProperty.java:105)
+	at java.util.AbstractList$Itr.hasNext(Unknown Source)
+	at java.util.AbstractCollection.contains(Unknown Source)
+	at hudson.model.ParametersAction.filter(ParametersAction.java:315)
+	at hudson.model.ParametersAction.getParameters(ParametersAction.java:171)
+	at hudson.model.ParametersAction.iterator(ParametersAction.java:166)
+	at hudson.model.AbstractBuild.getSensitiveBuildVariables(AbstractBuild.java:1009)
+	at org.jenkinsci.plugins.envinject.service.EnvInjectActionSetter.addEnvVarsToEnvInjectBuildAction(EnvInjectActionSetter.java:43)
+	at org.jenkinsci.plugins.envinject.EnvInjectListener.loadEnvironmentVariablesNode(EnvInjectListener.java:84)
+	at org.jenkinsci.plugins.envinject.EnvInjectListener.setUpEnvironment(EnvInjectListener.java:39)
+	at hudson.model.AbstractBuild$AbstractBuildExecution.createLauncher(AbstractBuild.java:572)
+	at hudson.model.AbstractBuild$AbstractBuildExecution.run(AbstractBuild.java:492)
+	at hudson.model.Run.execute(Run.java:1738)
+	at hudson.model.FreeStyleBuild.run(FreeStyleBuild.java:43)
+	at hudson.model.ResourceController.execute(ResourceController.java:98)
+	at hudson.model.Executor.run(Executor.java:410)
+Finished: FAILURE

@@ -1,0 +1,56 @@
+Started on Dec 20, 2016 7:11:00 AM
+Using strategy: Default
+[poll] Last Built Revision: Revision 0710c5be98d374e138e5a4206967541ab937ab25 (refs/remotes/origin/master)
+using .gitcredentials to set credentials
+ > C:\Program Files\Git\mingw64\libexec\git-core\git.exe --version # timeout=10
+[WARNING] Installed git version too old for credentials support
+ > C:\Program Files\Git\mingw64\libexec\git-core\git.exe init /tmp/hudson4466639451179719654tmp # timeout=10
+ > C:\Program Files\Git\mingw64\libexec\git-core\git.exe config --local --remove-section credential # timeout=10
+Could not remove the credential section from the git configuration
+FATAL: hudson.plugins.git.GitException: Could not init /tmp/hudson4466639451179719654tmp
+[8mha:AAAAWB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P08vOT+vOD8nVc8DzHWtSE4tKMnMz/PLL0ldFVf2c+b/lb5MDAwVRQxSaBqcITRIIQMEMIIUFgAAckCEiWAAAAA=[0mhudson.util.IOException2: hudson.plugins.git.GitException: Could not init /tmp/hudson4466639451179719654tmp
+	at hudson.plugins.git.GitSCM.compareRemoteRevisionWith(GitSCM.java:529)
+	at hudson.scm.SCM.compareRemoteRevisionWith(SCM.java:381)
+	at hudson.scm.SCM.poll(SCM.java:398)
+	at hudson.model.AbstractProject._poll(AbstractProject.java:1453)
+	at hudson.model.AbstractProject.poll(AbstractProject.java:1356)
+	at hudson.triggers.SCMTrigger$Runner.runPolling(SCMTrigger.java:526)
+	at hudson.triggers.SCMTrigger$Runner.run(SCMTrigger.java:555)
+	at hudson.util.SequentialExecutionQueue$QueueEntry.run(SequentialExecutionQueue.java:119)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:744)
+Caused by: hudson.plugins.git.GitException: Could not init /tmp/hudson4466639451179719654tmp
+	at org.jenkinsci.plugins.gitclient.CliGitAPIImpl$5.execute(CliGitAPIImpl.java:656)
+	at org.jenkinsci.plugins.gitclient.CliGitAPIImpl.launchCommandWithCredentials(CliGitAPIImpl.java:1389)
+	at org.jenkinsci.plugins.gitclient.CliGitAPIImpl.launchCommandWithCredentials(CliGitAPIImpl.java:1340)
+	at org.jenkinsci.plugins.gitclient.CliGitAPIImpl.launchCommandWithCredentials(CliGitAPIImpl.java:1331)
+	at org.jenkinsci.plugins.gitclient.CliGitAPIImpl.getHeadRev(CliGitAPIImpl.java:2452)
+	at hudson.plugins.git.GitSCM.compareRemoteRevisionWithImpl(GitSCM.java:583)
+	at hudson.plugins.git.GitSCM.compareRemoteRevisionWith(GitSCM.java:527)
+	... 12 more
+Caused by: hudson.plugins.git.GitException: Error performing command: C:\Program Files\Git\mingw64\libexec\git-core\git.exe init /tmp/hudson4466639451179719654tmp
+	at org.jenkinsci.plugins.gitclient.CliGitAPIImpl.launchCommandIn(CliGitAPIImpl.java:1717)
+	at org.jenkinsci.plugins.gitclient.CliGitAPIImpl.launchCommandIn(CliGitAPIImpl.java:1686)
+	at org.jenkinsci.plugins.gitclient.CliGitAPIImpl.launchCommandIn(CliGitAPIImpl.java:1682)
+	at org.jenkinsci.plugins.gitclient.CliGitAPIImpl.launchCommand(CliGitAPIImpl.java:1312)
+	at org.jenkinsci.plugins.gitclient.CliGitAPIImpl$5.execute(CliGitAPIImpl.java:654)
+	... 18 more
+Caused by: java.io.IOException: Cannot run program "C:\Program Files\Git\mingw64\libexec\git-core\git.exe": error=2, No such file or directory
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1041)
+	at hudson.Proc$LocalProc.<init>(Proc.java:244)
+	at hudson.Proc$LocalProc.<init>(Proc.java:216)
+	at hudson.Launcher$LocalLauncher.launch(Launcher.java:815)
+	at hudson.Launcher$ProcStarter.start(Launcher.java:381)
+	at org.jenkinsci.plugins.gitclient.CliGitAPIImpl.launchCommandIn(CliGitAPIImpl.java:1706)
+	... 22 more
+Caused by: java.io.IOException: error=2, No such file or directory
+	at java.lang.UNIXProcess.forkAndExec(Native Method)
+	at java.lang.UNIXProcess.<init>(UNIXProcess.java:135)
+	at java.lang.ProcessImpl.start(ProcessImpl.java:130)
+	at java.lang.ProcessBuilder.start(ProcessBuilder.java:1022)
+	... 27 more
+Done. Took 12 ms
+No changes

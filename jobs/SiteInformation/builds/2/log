@@ -1,0 +1,11 @@
+Started by user [8mha:AAAAlh+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzOEgYu/dLi1CL9vNKcHACFIKlWvwAAAA==[0manonymous
+Building in workspace C:\Users\nagaraj.nookala\.jenkins\jobs\SiteInformation\workspace
+[workspace] $ powershell.exe -NonInteractive -ExecutionPolicy ByPass "& 'C:\Users\NAGARA~1.NOO\AppData\Local\Temp\hudson6499699856503410404.ps1'"
+out-file : Access to the path 'C:\1234.txt' is denied.
+At C:\Users\nagaraj.nookala\AppData\Local\Temp\hudson6499699856503410404.ps1:7 char:1
++ Invoke-Command -ScriptBlock $cmd >> C:\1234.txt
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : OpenError: (:) [Out-File], UnauthorizedAccessException
+    + FullyQualifiedErrorId : FileOpenFailure,Microsoft.PowerShell.Commands.OutFileCommand
+ 
+Finished: SUCCESS

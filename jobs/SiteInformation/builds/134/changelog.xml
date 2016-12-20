@@ -1,0 +1,11 @@
+commit 2bd79fed158839df005e76471f109a506b7a4344
+tree 2b40babe7b7ac54fa778473c1b03c26ba38c7080
+parent 2f977d68c5cf4851464c76be2419263ee8937506
+author Nagaraj Nookala <nookala.nagaraj@gmail.com> 2016-07-18 22:27:58 +0530
+committer Nagaraj Nookala <nookala.nagaraj@gmail.com> 2016-07-18 22:27:58 +0530
+
+    Updating Citrix site Names
+
+
+
+:100644 100644 9eedb4d4a3792c892bf848f3ff9f90f736e22360 c95e505d5f2432cfb953bbf857b2169a8b8d4967 M	Storefront/SFDC.ps1

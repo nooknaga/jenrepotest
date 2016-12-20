@@ -1,0 +1,35 @@
+Started by user [8mha:AAAAlh+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzOEgYu/dLi1CL9vNKcHACFIKlWvwAAAA==[0manonymous
+Schedule job [8mha:AAAAuB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAz1EgZd/az8JH3nTKD2inj31LzUssT4YDcX53jXvLLMovy83NS8krDEoszEpJzUYn0ALIFHLOIAAAA=[0mCitrix_Geneva_SFDC_EnvironmentVariables
+Build [8mha:AAAAuh+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAytEgZ9/az8JH3nTKD2inj31LzUssT4YDcX53jXvLLMovy83NS8krDEoszEpJzUYn1DfQBzt91H5AAAAA==[0mCitrix_Geneva_SFDC_EnvironmentVariables #1 started
+[8mha:AAAAuh+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAytEgZ9/az8JH3nTKD2inj31LzUssT4YDcX53jXvLLMovy83NS8krDEoszEpJzUYn1DfQBzt91H5AAAAA==[0mCitrix_Geneva_SFDC_EnvironmentVariables #1 completed 
+ERROR: Failed to run DSL Script
+[8mha:AAAAWB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P08vOT+vOD8nVc8DzHWtSE4tKMnMz/PLL0ldFVf2c+b/lb5MDAwVRQxSaBqcITRIIQMEMIIUFgAAckCEiWAAAAA=[0mgroovy.lang.MissingPropertyException: No such property: b for class: Script1
+	at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.unwrap(ScriptBytecodeAdapter.java:50)
+	at org.codehaus.groovy.runtime.callsite.PogoGetPropertySite.getProperty(PogoGetPropertySite.java:49)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callGroovyObjectGetProperty(AbstractCallSite.java:231)
+	at Script1.run(Script1.groovy:2)
+	at Script1$run.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:42)
+	at Script1$run.call(Unknown Source)
+	at com.cloudbees.plugins.flow.FlowDSL.executeFlowScript(FlowDSL.groovy:84)
+	at com.cloudbees.plugins.flow.FlowRun$FlyweightTaskRunnerImpl.run(FlowRun.java:219)
+	at hudson.model.Run.execute(Run.java:1738)
+	at com.cloudbees.plugins.flow.FlowRun.run(FlowRun.java:155)
+	at hudson.model.ResourceController.execute(ResourceController.java:98)
+	at hudson.model.Executor.run(Executor.java:410)
+FATAL: No such property: b for class: Script1
+[8mha:AAAAWB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P08vOT+vOD8nVc8DzHWtSE4tKMnMz/PLL0ldFVf2c+b/lb5MDAwVRQxSaBqcITRIIQMEMIIUFgAAckCEiWAAAAA=[0mgroovy.lang.MissingPropertyException: No such property: b for class: Script1
+	at org.codehaus.groovy.runtime.ScriptBytecodeAdapter.unwrap(ScriptBytecodeAdapter.java:50)
+	at org.codehaus.groovy.runtime.callsite.PogoGetPropertySite.getProperty(PogoGetPropertySite.java:49)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callGroovyObjectGetProperty(AbstractCallSite.java:231)
+	at Script1.run(Script1.groovy:2)
+	at Script1$run.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:42)
+	at Script1$run.call(Unknown Source)
+	at com.cloudbees.plugins.flow.FlowDSL.executeFlowScript(FlowDSL.groovy:84)
+	at com.cloudbees.plugins.flow.FlowRun$FlyweightTaskRunnerImpl.run(FlowRun.java:219)
+	at hudson.model.Run.execute(Run.java:1738)
+	at com.cloudbees.plugins.flow.FlowRun.run(FlowRun.java:155)
+	at hudson.model.ResourceController.execute(ResourceController.java:98)
+	at hudson.model.Executor.run(Executor.java:410)
+Finished: FAILURE

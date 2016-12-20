@@ -1,0 +1,14 @@
+Started on Sep 17, 2016 12:04:00 AM
+Using strategy: Default
+[poll] Last Built Revision: Revision d8b4923fa97271fd1a2e101ab1f052ade4ed1dde (refs/remotes/origin/master)
+using .gitcredentials to set credentials
+ > C:\Program Files\Git\mingw64\libexec\git-core\git.exe --version # timeout=10
+ > C:\Program Files\Git\mingw64\libexec\git-core\git.exe init C:\Users\NAGARA~1.NOO\AppData\Local\Temp\hudson4830372189876611304tmp # timeout=10
+ > C:\Program Files\Git\mingw64\libexec\git-core\git.exe config --local credential.username nookala.nagaraj@gmail.com # timeout=10
+ > C:\Program Files\Git\mingw64\libexec\git-core\git.exe config --local credential.helper store --file=\"C:\Users\NAGARA~1.NOO\AppData\Local\Temp\git3996137467658279956.credentials\" # timeout=10
+ > C:\Program Files\Git\mingw64\libexec\git-core\git.exe -c core.askpass=true ls-remote -h https://github.com/nooknaga/Jenkins.git # timeout=10
+ > C:\Program Files\Git\mingw64\libexec\git-core\git.exe config --local --remove-section credential # timeout=10
+Found 1 remote heads on https://github.com/nooknaga/Jenkins.git
+[poll] Latest remote head revision on refs/heads/master is: e85084a5d83da307aeb9ce83782169cc72c7e023
+Done. Took 5 sec
+Changes found

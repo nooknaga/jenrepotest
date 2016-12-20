@@ -1,0 +1,18 @@
+Manifest-Version: 1.0
+Archiver-Version: Plexus Archiver
+Created-By: Apache Maven
+Built-By: emanuelez
+Build-Jdk: 1.6.0_37
+Extension-Name: periodicbackup
+Implementation-Title: periodicbackup
+Implementation-Version: 1.3
+Plugin-Class: org.jenkinsci.plugins.periodicbackup.PeriodicBackupPlugin
+Group-Id: org.jenkins-ci.plugins
+Short-Name: periodicbackup
+Long-Name: Periodic Backup
+Url: http://jenkins-ci.org/plugin/periodicbackup/
+Plugin-Version: 1.3
+Hudson-Version: 1.399
+Plugin-Developers: Tomasz Blaszczynski::tomasz.blaszczynski@gmail.com,
+ Emanuele Zattin::emanuelez@gmail.com
+

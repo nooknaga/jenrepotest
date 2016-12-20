@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<slave>
+  <name>devw2k12r2s-tml</name>
+  <description>windows slave</description>
+  <remoteFS>C:\jenkins</remoteFS>
+  <numExecutors>2</numExecutors>
+  <mode>NORMAL</mode>
+  <retentionStrategy class="hudson.slaves.RetentionStrategy$Always"/>
+  <launcher class="hudson.slaves.JNLPLauncher"/>
+  <label>Windows</label>
+  <nodeProperties/>
+  <userId>anonymous</userId>
+</slave>

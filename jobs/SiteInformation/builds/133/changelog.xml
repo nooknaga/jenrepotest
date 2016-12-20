@@ -1,0 +1,11 @@
+commit 2f977d68c5cf4851464c76be2419263ee8937506
+tree bbcf8e794bf0cf7bdc321203c9bdf46e56a28eee
+parent cce871f6a95116c74534308994efde1a36545a3c
+author Nagaraj Nookala <nookala.nagaraj@gmail.com> 2016-07-14 17:00:17 +0530
+committer Nagaraj Nookala <nookala.nagaraj@gmail.com> 2016-07-14 17:00:17 +0530
+
+    Modified the script
+
+
+
+:100644 100644 06d8003d1e2c45f4148c54a4c64b13b8791e5a8c 9eedb4d4a3792c892bf848f3ff9f90f736e22360 M	Storefront/SFDC.ps1

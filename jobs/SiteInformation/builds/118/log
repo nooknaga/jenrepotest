@@ -1,0 +1,56 @@
+Started by user [8mha:AAAAlh+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzOEgYu/dLi1CL9vNKcHACFIKlWvwAAAA==[0manonymous
+[EnvInject] - Loading node environment variables.
+Building in workspace C:\Users\nagaraj.nookala\.jenkins\jobs\SiteInformation\workspace
+[EnvInject] - Injecting environment variables from a build step.
+[EnvInject] - Injecting as environment variables the properties file path 'C:/Users/nagaraj.nookala/.jenkins/jobs/SiteInformation/workspace/env.properties'
+[EnvInject] - Variables injected successfully.
+testing
+SF-01
+10.10.10.11
+YktHstSF01.hosting.cloud.advent
+Primary
+SF-02
+10.10.10.12
+YktHstSF02.hosting.cloud.advent
+Secondary
+DC-01
+10.10.10.13
+YktHstDel01.hosting.cloud.advent
+Primary
+DC-02
+10.10.10.14
+YktHstDel02.hosting.cloud.advent
+Secondary
+SF-01
+10.30.30.31
+HrsHstSF01.hosting.cloud.advent
+Primary
+SF-02
+10.30.30.32
+HrsHstSF02.hosting.cloud.advent
+Secondary
+DC-01
+10.30.30.33
+HrsHstDel01.hosting.cloud.advent
+Primary
+DC-02
+10.30.30.34
+HrsHstDel02.hosting.cloud.advent
+Secondary
+=========================
+YktHstSF01.hosting.cloud.advent
+YktHstSF01.hosting.cloud.advent
+YktHstSF02.hosting.cloud.advent
+HrsHstSF01.hosting.cloud.advent
+HrsHstSF02.hosting.cloud.advent
+YktHstDel01.hosting.cloud.advent
+YktHstDel02.hosting.cloud.advent
+HrsHstDel01.hosting.cloud.advent
+HrsHstDel02.hosting.cloud.advent
+[workspace] $ powershell.exe -NonInteractive -ExecutionPolicy ByPass "& 'C:\Users\NAGARA~1.NOO\AppData\Local\Temp\hudson2610084739863808753.ps1'"
+[workspace] $ C:\groovy-2.4.7\bin\groovy.bat C:\Users\nagaraj.nookala\.jenkins\jobs\SiteInformation\workspace\hudson8979778147961239608.groovy
+Caught: groovy.lang.MissingPropertyException: No such property: site1sf2 for class: hudson8979778147961239608
+groovy.lang.MissingPropertyException: No such property: site1sf2 for class: hudson8979778147961239608
+	at hudson8979778147961239608.run(hudson8979778147961239608.groovy:1)
+Build step 'Execute Groovy script' marked build as failure
+Finished: FAILURE

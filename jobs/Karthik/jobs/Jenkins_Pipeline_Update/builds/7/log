@@ -1,0 +1,14 @@
+Started by user [8mha:AAAAlh+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzOEgYu/dLi1CL9vNKcHACFIKlWvwAAAA==[0manonymous
+Building in workspace C:\Users\nagaraj.nookala\.jenkins\jobs\Test\workspace
+[workspace] $ powershell.exe -NonInteractive -ExecutionPolicy ByPass "& 'C:\Users\NAGARA~1.NOO\AppData\Local\Temp\hudson8964031057935795990.ps1'"
+
+
+    Directory: C:\
+
+
+Mode                LastWriteTime         Length Name                                                                  
+----                -------------         ------ ----                                                                  
+d-----        6/29/2016   2:21 PM                devpipeline_importjobs                                                
+
+
+Finished: SUCCESS

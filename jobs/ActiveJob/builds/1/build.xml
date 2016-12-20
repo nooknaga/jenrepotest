@@ -1,0 +1,66 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<build>
+  <actions>
+    <hudson.model.ParametersAction>
+      <safeParameters class="sorted-set"/>
+      <parameters>
+        <hudson.model.StringParameterValue>
+          <name>SiteName</name>
+          <description></description>
+          <value></value>
+        </hudson.model.StringParameterValue>
+      </parameters>
+      <parameterDefinitionNames class="hudson.model.ParametersDefinitionProperty$1">
+        <outer-class>
+          <parameterDefinitions>
+            <org.biouno.unochoice.ChoiceParameter plugin="uno-choice@1.4">
+              <name>SiteName</name>
+              <description></description>
+              <randomName>choice-parameter-688583144922343</randomName>
+              <visibleItemCount>0</visibleItemCount>
+              <script class="org.biouno.unochoice.model.GroovyScript">
+                <script>import groovy.sql.Sql
+
+List nameslist = new ArrayList()
+db_user = &quot;root&quot;
+db_password = &quot;Advent2016!&quot;
+jdbc_url = &quot;jdbc:mysql://localhost:3306/jenkins&quot;
+db_driver = &quot;com.mysql.jdbc.Driver&quot;
+def sql = Sql.newInstance(jdbc_url, db_user, db_password,db_driver)
+sql.eachRow(&quot;Select distinct name from ACTIVE_CHOICE_PARAMS;&quot;)
+{
+nameslist &lt;&lt; it.name
+}
+return nameslist</script>
+                <fallbackScript>return[&apos;Script Error&apos;]</fallbackScript>
+              </script>
+              <projectName>ActiveJob</projectName>
+              <choiceType>PT_SINGLE_SELECT</choiceType>
+              <filterable>false</filterable>
+            </org.biouno.unochoice.ChoiceParameter>
+          </parameterDefinitions>
+        </outer-class>
+      </parameterDefinitionNames>
+    </hudson.model.ParametersAction>
+    <hudson.model.CauseAction>
+      <causeBag class="linked-hash-map">
+        <entry>
+          <hudson.model.Cause_-UserIdCause/>
+          <int>1</int>
+        </entry>
+      </causeBag>
+    </hudson.model.CauseAction>
+  </actions>
+  <queueId>17</queueId>
+  <timestamp>1467107887541</timestamp>
+  <startTime>1467107887699</startTime>
+  <result>SUCCESS</result>
+  <duration>14845</duration>
+  <charset>windows-1252</charset>
+  <keepLog>false</keepLog>
+  <builtOn></builtOn>
+  <workspace>C:\Users\nagaraj.nookala\.jenkins\jobs\ActiveJob\workspace</workspace>
+  <hudsonVersion>1.651.3</hudsonVersion>
+  <scm class="hudson.scm.NullChangeLogParser"/>
+  <culprits class="com.google.common.collect.EmptyImmutableSortedSet"/>
+</build>

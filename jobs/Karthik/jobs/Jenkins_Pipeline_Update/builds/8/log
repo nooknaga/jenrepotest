@@ -1,0 +1,36 @@
+Started by an SCM change
+Building in workspace C:\Users\nagaraj.nookala\.jenkins\jobs\Karthik\jobs\Jenkins_Pipeline_Update\workspace
+[workspace] $ powershell.exe -NonInteractive -ExecutionPolicy ByPass "& 'C:\Users\NAGARA~1.NOO\AppData\Local\Temp\hudson5567238283169786821.ps1'"
+[2016-06-29T23:01:09+05:30] WARN: *****************************************
+[2016-06-29T23:01:09+05:30] WARN: Did not find config file: C:/chef/client.rb, using command line options.
+[2016-06-29T23:01:09+05:30] WARN: *****************************************
+[2016-06-29T23:01:20+05:30] INFO: *** Chef 12.10.24 ***
+[2016-06-29T23:01:20+05:30] INFO: Platform: i386-mingw32
+[2016-06-29T23:01:20+05:30] INFO: Chef-client pid: 12172
+[2016-06-29T23:02:17+05:30] INFO: Client key C:\chef\client.pem is not present - registering
+[2016-06-29T23:02:17+05:30] WARN: Failed to read the private key C:\chef\validation.pem: #<Errno::ENOENT: No such file or directory @ rb_sysopen - C:\chef\validation.pem>
+[0m
+================================================================================[0m
+[31mChef encountered an error attempting to create the client "ATMECSINLT-095.ATMECS.CORP"[0m
+================================================================================[0m
+
+[0mPrivate Key Not Found:[0m
+----------------------[0m
+Your private key could not be loaded. If the key file exists, ensure that it is
+[0mreadable by chef-client.
+[0m
+[0mRelevant Config Settings:[0m
+-------------------------[0m
+validation_key "C:\chef\validation.pem"
+[0m
+[0mPlatform:[0m
+---------[0m
+i386-mingw32[0m
+
+[0m[2016-06-29T23:02:17+05:30] ERROR: Running exception handlers
+[2016-06-29T23:02:17+05:30] ERROR: Exception handlers complete
+[2016-06-29T23:02:17+05:30] FATAL: Stacktrace dumped to C:/chef/cache/chef-stacktrace.out
+[2016-06-29T23:02:17+05:30] FATAL: Please provide the contents of the stacktrace.out file if you file a bug report
+[2016-06-29T23:02:17+05:30] FATAL: Chef::Exceptions::PrivateKeyMissing: I cannot read C:\chef\validation.pem, which you told me to use to sign requests!
+Build step 'Windows PowerShell' marked build as failure
+Finished: FAILURE

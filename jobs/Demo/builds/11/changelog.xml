@@ -1,0 +1,11 @@
+commit dc9adf0315e406a563504f435a8b37a999e73405
+tree e783803e33a2e2e8af95131f1a0014bcbe6dba14
+parent e445c6ad395b39c036a0df804ab9a8d4c6664b82
+author noona02 <nagaraj.nookala@atmecs.com> 2016-03-17 17:15:11 +0530
+committer noona02 <nagaraj.nookala@atmecs.com> 2016-03-17 17:15:11 +0530
+
+    chaning project type to war from jar
+
+
+
+:100644 100644 88b3fe2807b64f0c6fc7401035c5fc3d69f1882d 56596584dac81b9de2794aae24c2b1ddfbf6c764 M	my-app/pom.xml
