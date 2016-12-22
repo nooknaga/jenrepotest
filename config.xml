@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <hudson>
   <disabledAdministrativeMonitors/>
-  <version>1.651.3</version>
-  <numExecutors>2</numExecutors>
+  <version>1.642</version>
+  <numExecutors>3</numExecutors>
   <mode>NORMAL</mode>
   <useSecurity>true</useSecurity>
   <authorizationStrategy class="hudson.security.AuthorizationStrategy$Unsecured"/>
@@ -29,9 +29,9 @@
       <name>ec2-MyAmazonEc2</name>
       <useInstanceProfileForCredentials>false</useInstanceProfileForCredentials>
       <accessId>AKIAIKLGNS2TIZQN6TRA</accessId>
-      <secretKey>r4JOni9+jsuh5MzlQQ/2016BWL+1jrVUkaaYH2ItS0SH6/FkfbdkBTCZhPFG2ghmhwHxof/q6v6LZHlNE0kXyg==</secretKey>
+      <secretKey>cVH5hgD65p27cl3AmvjWqtXH7Vwa2g+hdK27+nQG9R0D5B8YlbVVepencCX8eEIQgSxhFSyhVYJvLc4BuYjPkrCUGpj799JODIUA9xDwWIkqe6qZc1bCCnIJywNHThXwl1YzC0RHQvauV54myaPmhQ==</secretKey>
       <privateKey>
-        <privateKey>+rxv0ch3qe8t6FME5NVPAjckwxcS5loMFbpK6rDIEgz5+E1czW7VgV6QSRvi6fUrhDyRDZ508F//Ad3sagNmJH6KrorpLFJZSS2EMkTDQ9pozfsK8utQLq60V2FaZyNKE+sCd9RF2ZF5paJVRHQ4RFglbjfen5bNsSyztMO+0ZDMAABpNHdIDQr6Rdmy+pdzPFi7CI666kl/64qsl50WwoVbJBogTBJlFgM6KTJcpFPPPTHCd1KNZjndMqPD8HPwt9JnsWgnCp9RdiM5AcEjhzknLeFaZbZk72LHTG6vL/Ylk42dKsVyplQKR/NTGdxsnt4csh+6pMh3mXPrMB07lGwZ+90efvmsI/hRNCzw98lA0Q8xedK7FXJGxCtI+HRKHWPjb3x/Bk/aRxUyyPook2I5rqfYOzPwu1/kFfwkL15+lIMUxmkQi0QpTN3hqx6EQV3zuGuDvUo8Siwg3H2usUYEldTA3qLJgzK2zI5MYIMrK80565trshK0HyWb6V3Rd3RHAw5KXWDKZdvD7fN7lVwXCq3mhji8tCvagojSXVHROwrme5Ijteap/h/gc3sgCc2SshkPOa7YxKqOl8x16a+cQQlm6BkUx9yEYJE8LC4vJFB9iSaYTJaZXpbp0zY9</privateKey>
+        <privateKey>5Oc/Ul7mq3p0PugAEdpjxTXHqjlLwPciPF0t4iE/d1re8sTTbcYecj8Ru7rgb7AageoRNtDvoQGsxPjw/LTaPmM6TPz1R0m7ctDRHch0It9nd8doFOzqOYFwpepgnN7lN0+oMXoVz4ZZUrJw13PrDGnEvUN1xpHb63t4pN3YCeOvyST6Q90YEZdXtOAYbY4V80iIPR2/movXIxq4SMumt7E8cOjrfNdd5iDjc85woWTnzT5LDQteMerDPkXRJ+PLW2P8rPghvQDBOwIDr1t0qn577WI5JGGTcoNDZkzivLuTsB6xP8vygNUHx6n4aTsGgQ70NxzWyJfyBw44TDg5iKPdxdM3ojCuOrubaXJnyEgudcSJh7kegLsvpNmv1WEzaw0m8M5rZ5oCMu//r/1xsP1yhplVaaw3dlw1gJkJT3kGP6QdGXqCzxC7imbeStuJNnEaDrFJN4U0hMxPX45hekkXzfEH9kKPD8nrLxr9WvEoEpeMS+3Hi1EENDEAv6jnZ+tmOx/iuMzHxggW7wcj0aqJ2vsGCCsJ0qU9Hj0rTlG68+HCfXPov09k9C0eP9pFJlvFstGgjHxg5GIPn79VCQl1lnA6nGnvegjACVh4nel4T8lKsVgvEqAjKtE8mGlZNstQgfWjoYuQO1SOUvp6SwfTYoA93yI18n2PjTVKvwCjmE1OiAc63x/CnNkNh3ab2OcB03do8hrEALCeFD9g+6DpFad2WSPKwUq2Yig9a1Jo3b3JCcUh573Mamda3TPSjx04w1mMLZNnAHOE6/O4TJqvUuTLi7SFxezXAXcw121CR9lyPM/E4p2wO0woRPOAWWJ195p0tvsPxrUDlNdprs8GgYMP9L7nK0mbaQhWq78=</privateKey>
       </privateKey>
       <instanceCap>2147483647</instanceCap>
       <templates>
