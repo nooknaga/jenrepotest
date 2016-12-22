@@ -1,0 +1,133 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<project>
+  <actions/>
+  <description></description>
+  <keepDependencies>false</keepDependencies>
+  <properties>
+    <hudson.model.ParametersDefinitionProperty>
+      <parameterDefinitions>
+        <org.biouno.unochoice.ChoiceParameter plugin="uno-choice@1.4">
+          <name>SiteName</name>
+          <description></description>
+          <randomName>choice-parameter-688583144922343</randomName>
+          <visibleItemCount>1</visibleItemCount>
+          <script class="org.biouno.unochoice.model.GroovyScript">
+            <script>import groovy.sql.Sql
+
+List nameslist = new ArrayList()
+
+def sql = Sql.newInstance(&quot;jdbc:mysql://localhost:3306/activechoice&quot;, &quot;root&quot;, &quot;Advent2016!&quot;, &quot;com.mysql.jdbc.Driver&quot;)
+sql.eachRow (&quot;select distinct SiteName from sitedetails;&quot;)
+{
+nameslist &lt;&lt; it.SiteName
+}
+return nameslist</script>
+            <fallbackScript>return[&apos;Script Error&apos;]</fallbackScript>
+          </script>
+          <projectName>active123</projectName>
+          <choiceType>PT_SINGLE_SELECT</choiceType>
+          <filterable>false</filterable>
+        </org.biouno.unochoice.ChoiceParameter>
+        <org.biouno.unochoice.CascadeChoiceParameter plugin="uno-choice@1.4">
+          <name>Datacenter</name>
+          <description></description>
+          <randomName>choice-parameter-755272524443206</randomName>
+          <visibleItemCount>1</visibleItemCount>
+          <script class="org.biouno.unochoice.model.GroovyScript">
+            <script>import groovy.sql.Sql
+
+List nameslist = new ArrayList()
+
+def sql = Sql.newInstance(&quot;jdbc:mysql://localhost:3306/activechoice&quot;, &quot;root&quot;, &quot;Advent2016!&quot;, &quot;com.mysql.jdbc.Driver&quot;)
+def query = &quot;select DataCenterName from datacenters where SiteName =&quot;+ &quot;&apos;${SiteName}&apos;&quot;+&quot;;&quot;
+sql.eachRow (query)
+{
+nameslist &lt;&lt; it.DataCenterName
+}
+return nameslist</script>
+            <fallbackScript>return[&apos;Script Error&apos;]</fallbackScript>
+          </script>
+          <projectName>active123</projectName>
+          <parameters class="linked-hash-map"/>
+          <referencedParameters>SiteName</referencedParameters>
+          <choiceType>PT_SINGLE_SELECT</choiceType>
+          <filterable>false</filterable>
+        </org.biouno.unochoice.CascadeChoiceParameter>
+        <org.biouno.unochoice.CascadeChoiceParameter plugin="uno-choice@1.4">
+          <name>StoreFront</name>
+          <description></description>
+          <randomName>choice-parameter-794989507665808</randomName>
+          <visibleItemCount>1</visibleItemCount>
+          <script class="org.biouno.unochoice.model.GroovyScript">
+            <script>import groovy.sql.Sql
+
+List storefront = new ArrayList()
+
+def sql = Sql.newInstance(&quot;jdbc:mysql://localhost:3306/activechoice&quot;, &quot;root&quot;, &quot;Advent2016!&quot;, &quot;com.mysql.jdbc.Driver&quot;)
+def query = &quot;select Component, IPAddress from sfdc where DataCenterName =&quot;+&quot;&apos;${Datacenter}&apos;&quot;+&quot;and Component like &apos;SF%&apos;;&quot;
+
+sql.eachRow (query)
+{
+storefront &lt;&lt; it.Component +&quot; &quot;+ it.IPAddress
+
+}
+return storefront
+</script>
+            <fallbackScript>return[&apos;Script Error&apos;]</fallbackScript>
+          </script>
+          <projectName>active123</projectName>
+          <parameters class="linked-hash-map"/>
+          <referencedParameters>Datacenter</referencedParameters>
+          <choiceType>PT_SINGLE_SELECT</choiceType>
+          <filterable>false</filterable>
+        </org.biouno.unochoice.CascadeChoiceParameter>
+        <org.biouno.unochoice.CascadeChoiceParameter plugin="uno-choice@1.4">
+          <name>DeliveryController</name>
+          <description></description>
+          <randomName>choice-parameter-803602120700972</randomName>
+          <visibleItemCount>1</visibleItemCount>
+          <script class="org.biouno.unochoice.model.GroovyScript">
+            <script>import groovy.sql.Sql
+
+List deliverycontroller = new ArrayList()
+
+def sql = Sql.newInstance(&quot;jdbc:mysql://localhost:3306/activechoice&quot;, &quot;root&quot;, &quot;Advent2016!&quot;, &quot;com.mysql.jdbc.Driver&quot;)
+def query = &quot;select Component, IPAddress from sfdc where DataCenterName =&quot;+&quot;&apos;${Datacenter}&apos;&quot;+&quot;and Component like &apos;DC%&apos;;&quot;
+
+sql.eachRow (query)
+{
+deliverycontroller &lt;&lt; it.Component +&quot; &quot;+ it.IPAddress
+
+}
+return deliverycontroller
+</script>
+            <fallbackScript>return[&apos;Script Error&apos;]</fallbackScript>
+          </script>
+          <projectName>active123</projectName>
+          <parameters class="linked-hash-map"/>
+          <referencedParameters>Datacenter</referencedParameters>
+          <choiceType>PT_SINGLE_SELECT</choiceType>
+          <filterable>false</filterable>
+        </org.biouno.unochoice.CascadeChoiceParameter>
+      </parameterDefinitions>
+    </hudson.model.ParametersDefinitionProperty>
+  </properties>
+  <scm class="hudson.scm.NullSCM"/>
+  <canRoam>true</canRoam>
+  <disabled>false</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <triggers>
+    <hudson.triggers.TimerTrigger>
+      <spec>* * 25 * *</spec>
+    </hudson.triggers.TimerTrigger>
+    <hudson.triggers.SCMTrigger>
+      <spec>* * 25 * *</spec>
+      <ignorePostCommitHooks>false</ignorePostCommitHooks>
+    </hudson.triggers.SCMTrigger>
+  </triggers>
+  <concurrentBuild>false</concurrentBuild>
+  <builders/>
+  <publishers/>
+  <buildWrappers/>
+</project>
