@@ -1,8 +1,0 @@
-Started by user [8mha:AAAAlh+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzOEgYu/dLi1CL9vNKcHACFIKlWvwAAAA==[0manonymous
-Building in workspace C:\Users\nagaraj.nookala\.jenkins\jobs\SiteInformation\workspace
-[workspace] $ C:\groovy-2.4.7\bin\groovy.bat C:\Users\nagaraj.nookala\.jenkins\jobs\SiteInformation\workspace\hudson3103167096653162661.groovy
-Caught: groovy.lang.MissingPropertyException: No such property: params for class: hudson3103167096653162661
-groovy.lang.MissingPropertyException: No such property: params for class: hudson3103167096653162661
-	at hudson3103167096653162661.run(hudson3103167096653162661.groovy:6)
-Build step 'Execute Groovy script' marked build as failure
-Finished: FAILURE

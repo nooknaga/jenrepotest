@@ -1,112 +1,0 @@
-Started by an SCM change
-Building in workspace C:\Users\nagaraj.nookala\.jenkins\jobs\Demo2\workspace
- > C:\Program Files\Git\mingw64\libexec\git-core\git.exe rev-parse --is-inside-work-tree # timeout=10
-Fetching changes from the remote Git repository
- > C:\Program Files\Git\mingw64\libexec\git-core\git.exe config remote.origin.url https://github.com/nooknaga/Jenkins.git # timeout=10
-Fetching upstream changes from https://github.com/nooknaga/Jenkins.git
- > C:\Program Files\Git\mingw64\libexec\git-core\git.exe --version # timeout=10
-using .gitcredentials to set credentials
- > C:\Program Files\Git\mingw64\libexec\git-core\git.exe config --local credential.username nookala.nagaraj@gmail.com # timeout=10
- > C:\Program Files\Git\mingw64\libexec\git-core\git.exe config --local credential.helper store --file=\"C:\Users\NAGARA~1.NOO\AppData\Local\Temp\git6505038706199168388.credentials\" # timeout=10
- > C:\Program Files\Git\mingw64\libexec\git-core\git.exe -c core.askpass=true fetch --tags --progress https://github.com/nooknaga/Jenkins.git +refs/heads/*:refs/remotes/origin/*
- > C:\Program Files\Git\mingw64\libexec\git-core\git.exe config --local --remove-section credential # timeout=10
- > C:\Program Files\Git\mingw64\libexec\git-core\git.exe rev-parse "refs/remotes/origin/master^{commit}" # timeout=10
- > C:\Program Files\Git\mingw64\libexec\git-core\git.exe rev-parse "refs/remotes/origin/origin/master^{commit}" # timeout=10
-Checking out Revision dc9adf0315e406a563504f435a8b37a999e73405 (refs/remotes/origin/master)
- > C:\Program Files\Git\mingw64\libexec\git-core\git.exe config core.sparsecheckout # timeout=10
- > C:\Program Files\Git\mingw64\libexec\git-core\git.exe checkout -f dc9adf0315e406a563504f435a8b37a999e73405
- > C:\Program Files\Git\mingw64\libexec\git-core\git.exe rev-list e445c6ad395b39c036a0df804ab9a8d4c6664b82 # timeout=10
-[workspace] $ cmd /c call C:\Users\NAGARA~1.NOO\AppData\Local\Temp\hudson773942370406374042.bat
-
-C:\Users\nagaraj.nookala\.jenkins\jobs\Demo2\workspace>javac Helloworld.java 
-
-C:\Users\nagaraj.nookala\.jenkins\jobs\Demo2\workspace>java Helloworld 
-Hello world
-
-C:\Users\nagaraj.nookala\.jenkins\jobs\Demo2\workspace>exit 0 
-[workspace] $ cmd.exe /C '"D:\Personal\LinuxTraining\Maven\apache-maven-3.3.9\bin\mvn.cmd -f my-app/pom.xml clean package && exit %%ERRORLEVEL%%"'
-[INFO] Scanning for projects...
-[INFO]                                                                         
-[INFO] ------------------------------------------------------------------------
-[INFO] Building my-app 1.0-SNAPSHOT
-[INFO] ------------------------------------------------------------------------
-[INFO] 
-[8mha:AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ my-app ---
-[INFO] Deleting C:\Users\nagaraj.nookala\.jenkins\jobs\Demo2\workspace\my-app\target
-[INFO] 
-[8mha:AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ my-app ---
-[8mha:AAAAYx+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6S2fNly5fzGzauYGBgqihikoFqS8/OK83NS9ZwhNEghAwQwghQWAACwxA+XYgAAAA==[0m[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
-[INFO] skip non existing resourceDirectory C:\Users\nagaraj.nookala\.jenkins\jobs\Demo2\workspace\my-app\src\main\resources
-[INFO] 
-[8mha:AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ my-app ---
-[INFO] Changes detected - recompiling the module!
-[8mha:AAAAYx+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6S2fNly5fzGzauYGBgqihikoFqS8/OK83NS9ZwhNEghAwQwghQWAACwxA+XYgAAAA==[0m[WARNING] File encoding has not been set, using platform encoding Cp1252, i.e. build is platform dependent!
-[INFO] Compiling 1 source file to C:\Users\nagaraj.nookala\.jenkins\jobs\Demo2\workspace\my-app\target\classes
-[INFO] 
-[8mha:AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ my-app ---
-[8mha:AAAAYx+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6S2fNly5fzGzauYGBgqihikoFqS8/OK83NS9ZwhNEghAwQwghQWAACwxA+XYgAAAA==[0m[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
-[INFO] skip non existing resourceDirectory C:\Users\nagaraj.nookala\.jenkins\jobs\Demo2\workspace\my-app\src\test\resources
-[INFO] 
-[8mha:AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ my-app ---
-[INFO] Changes detected - recompiling the module!
-[8mha:AAAAYx+LCAAAAAAAAP9b85aBtbiIQSWjNKU4P0+vJLE4u1gvPjexLDVPzxdEhicW5WXmpfvll6S2fNly5fzGzauYGBgqihikoFqS8/OK83NS9ZwhNEghAwQwghQWAACwxA+XYgAAAA==[0m[WARNING] File encoding has not been set, using platform encoding Cp1252, i.e. build is platform dependent!
-[INFO] Compiling 1 source file to C:\Users\nagaraj.nookala\.jenkins\jobs\Demo2\workspace\my-app\target\test-classes
-[INFO] 
-[8mha:AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ my-app ---
-[INFO] Surefire report directory: C:\Users\nagaraj.nookala\.jenkins\jobs\Demo2\workspace\my-app\target\surefire-reports
-
--------------------------------------------------------
- T E S T S
--------------------------------------------------------
-Running com.mycompany.app.AppTest
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.009 sec
-
-Results :
-
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0
-
-[INFO] 
-[8mha:AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEGvvmZ+X75ZekLlOVfvTjc8FPJgaGiiIGKaiG5Py84vycVD1nCA1SyAABjCCFBQCV27OjYAAAAA==[0m[INFO] --- maven-war-plugin:2.2:war (default-war) @ my-app ---
-Downloading: https://repo.maven.apache.org/maven2/com/thoughtworks/xstream/xstream/1.3.1/xstream-1.3.1.pom
-4/12 KB   8/12 KB   12/12 KB              Downloaded: https://repo.maven.apache.org/maven2/com/thoughtworks/xstream/xstream/1.3.1/xstream-1.3.1.pom (12 KB at 4.6 KB/sec)
-Downloading: https://repo.maven.apache.org/maven2/com/thoughtworks/xstream/xstream-parent/1.3.1/xstream-parent-1.3.1.pom
-4/14 KB    8/14 KB   12/14 KB   14/14 KB              Downloaded: https://repo.maven.apache.org/maven2/com/thoughtworks/xstream/xstream-parent/1.3.1/xstream-parent-1.3.1.pom (14 KB at 30.4 KB/sec)
-Downloading: https://repo.maven.apache.org/maven2/xpp3/xpp3_min/1.1.4c/xpp3_min-1.1.4c.pom
-2/2 KB              Downloaded: https://repo.maven.apache.org/maven2/xpp3/xpp3_min/1.1.4c/xpp3_min-1.1.4c.pom (2 KB at 3.7 KB/sec)
-Downloading: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-filtering/1.0-beta-2/maven-filtering-1.0-beta-2.pom
-4/4 KB            Downloaded: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-filtering/1.0-beta-2/maven-filtering-1.0-beta-2.pom (4 KB at 8.2 KB/sec)
-Downloading: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-components/10/maven-shared-components-10.pom
-4/9 KB   8/9 KB   9/9 KB            Downloaded: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-shared-components/10/maven-shared-components-10.pom (9 KB at 16.6 KB/sec)
-Downloading: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/1.5.6/plexus-utils-1.5.6.pom
-4/6 KB   6/6 KB            Downloaded: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-utils/1.5.6/plexus-utils-1.5.6.pom (6 KB at 11.1 KB/sec)
-Downloading: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus/1.0.12/plexus-1.0.12.pom
-4/10 KB   8/10 KB   10/10 KB              Downloaded: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus/1.0.12/plexus-1.0.12.pom (10 KB at 20.3 KB/sec)
-Downloading: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-interpolation/1.6/plexus-interpolation-1.6.pom
-3/3 KB              Downloaded: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-interpolation/1.6/plexus-interpolation-1.6.pom (3 KB at 6.1 KB/sec)
-Downloading: https://repo.maven.apache.org/maven2/com/thoughtworks/xstream/xstream/1.3.1/xstream-1.3.1.jar
-Downloading: https://repo.maven.apache.org/maven2/xpp3/xpp3_min/1.1.4c/xpp3_min-1.1.4c.jar
-Downloading: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-filtering/1.0-beta-2/maven-filtering-1.0-beta-2.jar
-4/422 KB   8/422 KB   12/422 KB   16/422 KB   20/422 KB   24/422 KB   28/422 KB   32/422 KB   36/422 KB   40/422 KB   44/422 KB   48/422 KB   52/422 KB   56/422 KB   60/422 KB   64/422 KB   68/422 KB   72/422 KB   76/422 KB   80/422 KB   84/422 KB   88/422 KB   92/422 KB   96/422 KB   100/422 KB   104/422 KB   108/422 KB   112/422 KB   116/422 KB   120/422 KB   124/422 KB   128/422 KB   132/422 KB   136/422 KB   140/422 KB   144/422 KB   148/422 KB   152/422 KB   156/422 KB   160/422 KB   164/422 KB   168/422 KB   172/422 KB   176/422 KB   180/422 KB   184/422 KB   188/422 KB   192/422 KB   196/422 KB   200/422 KB   204/422 KB   208/422 KB   212/422 KB   216/422 KB   220/422 KB   224/422 KB   228/422 KB   232/422 KB   236/422 KB   240/422 KB   244/422 KB   248/422 KB   252/422 KB   256/422 KB   260/422 KB   264/422 KB   268/422 KB   272/422 KB   276/422 KB   280/422 KB   284/422 KB   288/422 KB   292/422 KB   296/422 KB   300/422 KB   304/422 KB   308/422 KB   312/422 KB   316/422 KB   320/422 KB   324/422 KB   328/422 KB   332/422 KB   336/422 KB   340/422 KB   344/422 KB   348/422 KB   352/422 KB   356/422 KB   360/422 KB   364/422 KB   368/422 KB   372/422 KB   376/422 KB   380/422 KB   384/422 KB   388/422 KB   392/422 KB   396/422 KB   400/422 KB   404/422 KB   408/422 KB   412/422 KB   416/422 KB   420/422 KB   422/422 KB                Downloaded: https://repo.maven.apache.org/maven2/com/thoughtworks/xstream/xstream/1.3.1/xstream-1.3.1.jar (422 KB at 268.3 KB/sec)
-4/25 KB      8/25 KB   12/25 KB   16/25 KB   20/25 KB   24/25 KB   25/25 KB   4/33 KB   25/25 KB   8/33 KB   25/25 KB   12/33 KB   25/25 KB   16/33 KB   25/25 KB   20/33 KB   25/25 KB   24/33 KB   25/25 KB   28/33 KB   25/25 KB   32/33 KB   25/25 KB   33/33 KB   25/25 KB                         Downloaded: https://repo.maven.apache.org/maven2/xpp3/xpp3_min/1.1.4c/xpp3_min-1.1.4c.jar (25 KB at 10.6 KB/sec)
-                      Downloaded: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-filtering/1.0-beta-2/maven-filtering-1.0-beta-2.jar (33 KB at 13.2 KB/sec)
-[INFO] Packaging webapp
-[INFO] Assembling webapp [my-app] in [C:\Users\nagaraj.nookala\.jenkins\jobs\Demo2\workspace\my-app\target\my-app-1.0-SNAPSHOT]
-[INFO] Processing war project
-[INFO] Webapp assembled in [35 msecs]
-[INFO] Building war: C:\Users\nagaraj.nookala\.jenkins\jobs\Demo2\workspace\my-app\target\my-app-1.0-SNAPSHOT.war
-[INFO] ------------------------------------------------------------------------
-[INFO] BUILD FAILURE
-[INFO] ------------------------------------------------------------------------
-[INFO] Total time: 13.247 s
-[INFO] Finished at: 2016-03-17T17:17:09+05:30
-[INFO] Final Memory: 23M/212M
-[INFO] ------------------------------------------------------------------------
-[8mha:AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55ZekOlc7RKnPKH7IxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAACsNFCqYAAAAA==[0m[ERROR] Failed to execute goal org.apache.maven.plugins:maven-war-plugin:2.2:war (default-war) on project my-app: Error assembling WAR: webxml attribute is required (or pre-existing WEB-INF/web.xml if executing in update mode) -> [Help 1]
-[8mha:AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55ZekOlc7RKnPKH7IxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAACsNFCqYAAAAA==[0m[ERROR] 
-[8mha:AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55ZekOlc7RKnPKH7IxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAACsNFCqYAAAAA==[0m[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
-[8mha:AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55ZekOlc7RKnPKH7IxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAACsNFCqYAAAAA==[0m[ERROR] Re-run Maven using the -X switch to enable full debug logging.
-[8mha:AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55ZekOlc7RKnPKH7IxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAACsNFCqYAAAAA==[0m[ERROR] 
-[8mha:AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55ZekOlc7RKnPKH7IxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAACsNFCqYAAAAA==[0m[ERROR] For more information about the errors and possible solutions, please read the following articles:
-[8mha:AAAAYB+LCAAAAAAAAP9b85aBtbiIQSmjNKU4P0+vJLE4u1gvPjexLDVPzxdEuhYV5Rf55ZekOlc7RKnPKH7IxMBQUcQgBdWQnJ9XnJ+TqucMoUEKGSCAEaSwAACsNFCqYAAAAA==[0m[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoExecutionException
-Build step 'Invoke top-level Maven targets' marked build as failure
-Finished: FAILURE
