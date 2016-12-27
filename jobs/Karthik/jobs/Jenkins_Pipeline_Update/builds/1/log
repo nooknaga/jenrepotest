@@ -1,0 +1,46 @@
+Started by user [8mha:AAAAlh+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzOEgYu/dLi1CL9vNKcHACFIKlWvwAAAA==[0manonymous
+Building in workspace C:\Users\nagaraj.nookala\.jenkins\jobs\Test\workspace
+[workspace] $ powershell.exe -NonInteractive -ExecutionPolicy ByPass "& 'C:\Users\NAGARA~1.NOO\AppData\Local\Temp\hudson6689330407654432513.ps1'"
+
+
+    Directory: C:\
+
+
+Mode                LastWriteTime         Length Name                                                                  
+----                -------------         ------ ----                                                                  
+d-----        6/29/2016   1:59 PM                1234                                                                  
+[2016-06-29T13:59:27+05:30] WARN: *****************************************
+[2016-06-29T13:59:27+05:30] WARN: Did not find config file: C:/chef/client.rb, using command line options.
+[2016-06-29T13:59:27+05:30] WARN: *****************************************
+[2016-06-29T13:59:37+05:30] INFO: *** Chef 12.10.24 ***
+[2016-06-29T13:59:37+05:30] INFO: Platform: i386-mingw32
+[2016-06-29T13:59:37+05:30] INFO: Chef-client pid: 7380
+[2016-06-29T13:59:48+05:30] INFO: Client key C:\chef\client.pem is not present - registering
+[2016-06-29T13:59:48+05:30] WARN: Failed to read the private key C:\chef\validation.pem: #<Errno::ENOENT: No such file or directory @ rb_sysopen - C:\chef\validation.pem>
+[0m
+================================================================================[0m
+[31mChef encountered an error attempting to create the client "ATMECSINLT-095.ATMECS.CORP"[0m
+================================================================================[0m
+
+[0mPrivate Key Not Found:[0m
+----------------------[0m
+Your private key could not be loaded. If the key file exists, ensure that it is
+[0mreadable by chef-client.
+[0m
+[0mRelevant Config Settings:[0m
+-------------------------[0m
+validation_key "C:\chef\validation.pem"
+[0m
+[0mPlatform:[0m
+---------[0m
+i386-mingw32[0m
+
+[0m[2016-06-29T13:59:48+05:30] ERROR: Running exception handlers
+[2016-06-29T13:59:48+05:30] ERROR: Exception handlers complete
+[2016-06-29T13:59:48+05:30] FATAL: Stacktrace dumped to C:/chef/cache/chef-stacktrace.out
+[2016-06-29T13:59:48+05:30] FATAL: Please provide the contents of the stacktrace.out file if you file a bug report
+[2016-06-29T13:59:48+05:30] FATAL: Chef::Exceptions::PrivateKeyMissing: I cannot read C:\chef\validation.pem, which you told me to use to sign requests!
+
+
+Build step 'Windows PowerShell' marked build as failure
+Finished: FAILURE

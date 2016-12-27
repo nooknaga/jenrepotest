@@ -1,0 +1,126 @@
+Started by user [8mha:AAAAlh+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzOEgYu/dLi1CL9vNKcHACFIKlWvwAAAA==[0manonymous
+[EnvInject] - Loading node environment variables.
+Building in workspace C:\Users\nagaraj.nookala\.jenkins\jobs\SiteInformation\workspace
+ > C:\Program Files\Git\mingw64\libexec\git-core\git.exe rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > C:\Program Files\Git\mingw64\libexec\git-core\git.exe config remote.origin.url https://github.com/nooknaga/SiteInfo.git # timeout=10
+Fetching upstream changes from https://github.com/nooknaga/SiteInfo.git
+ > C:\Program Files\Git\mingw64\libexec\git-core\git.exe --version # timeout=10
+using .gitcredentials to set credentials
+ > C:\Program Files\Git\mingw64\libexec\git-core\git.exe config --local credential.username nookala.nagaraj@gmail.com # timeout=10
+ > C:\Program Files\Git\mingw64\libexec\git-core\git.exe config --local credential.helper store --file=\"C:\Users\NAGARA~1.NOO\AppData\Local\Temp\git8408909280643644215.credentials\" # timeout=10
+ > C:\Program Files\Git\mingw64\libexec\git-core\git.exe -c core.askpass=true fetch --tags --progress https://github.com/nooknaga/SiteInfo.git +refs/heads/*:refs/remotes/origin/*
+ > C:\Program Files\Git\mingw64\libexec\git-core\git.exe config --local --remove-section credential # timeout=10
+ > C:\Program Files\Git\mingw64\libexec\git-core\git.exe rev-parse "refs/remotes/origin/master^{commit}" # timeout=10
+ > C:\Program Files\Git\mingw64\libexec\git-core\git.exe rev-parse "refs/remotes/origin/origin/master^{commit}" # timeout=10
+Checking out Revision 2bd79fed158839df005e76471f109a506b7a4344 (refs/remotes/origin/master)
+ > C:\Program Files\Git\mingw64\libexec\git-core\git.exe config core.sparsecheckout # timeout=10
+ > C:\Program Files\Git\mingw64\libexec\git-core\git.exe checkout -f 2bd79fed158839df005e76471f109a506b7a4344
+ > C:\Program Files\Git\mingw64\libexec\git-core\git.exe rev-list 2bd79fed158839df005e76471f109a506b7a4344 # timeout=10
+SF-01
+10.10.10.11
+YktHstSF01.hosting.cloud.advent
+Primary
+SF-02
+10.10.10.12
+YktHstSF02.hosting.cloud.advent
+Secondary
+DC-01
+10.10.10.13
+YktHstDel01.hosting.cloud.advent
+Primary
+DC-02
+10.10.10.14
+YktHstDel02.hosting.cloud.advent
+Secondary
+SF-01
+10.30.30.31
+HrsHstSF01.hosting.cloud.advent
+Primary
+SF-02
+10.30.30.32
+HrsHstSF02.hosting.cloud.advent
+Secondary
+DC-01
+10.30.30.33
+HrsHstDel01.hosting.cloud.advent
+Primary
+DC-02
+10.30.30.34
+HrsHstDel02.hosting.cloud.advent
+Secondary
+[EnvInject] - Injecting environment variables from a build step.
+[EnvInject] - Injecting as environment variables the properties file path 'C:/Users/nagaraj.nookala/.jenkins/jobs/SiteInformation/workspace/env.properties'
+[EnvInject] - Variables injected successfully.
+[workspace] $ powershell.exe -NonInteractive -ExecutionPolicy ByPass "& 'C:\Users\NAGARA~1.NOO\AppData\Local\Temp\hudson5275956304934621805.ps1'"
+Add-Content : Access to the path 'C:\1234.txt' is denied.
+At C:\Users\nagaraj.nookala\.jenkins\jobs\SiteInformation\workspace\Storefront\SFDC.ps1:25 char:21
++ $Site1StoreFront1 | Add-Content C:\1234.txt
++                     ~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : PermissionDenied: (C:\1234.txt:String) [Add-Content], UnauthorizedAccessException
+    + FullyQualifiedErrorId : GetContentWriterUnauthorizedAccessError,Microsoft.PowerShell.Commands.AddContentCommand
+ 
+Add-Content : Access to the path 'C:\1234.txt' is denied.
+At C:\Users\nagaraj.nookala\.jenkins\jobs\SiteInformation\workspace\Storefront\SFDC.ps1:26 char:21
++ $Site1StoreFront2 | Add-Content C:\1234.txt
++                     ~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : PermissionDenied: (C:\1234.txt:String) [Add-Content], UnauthorizedAccessException
+    + FullyQualifiedErrorId : GetContentWriterUnauthorizedAccessError,Microsoft.PowerShell.Commands.AddContentCommand
+ 
+Add-Content : Access to the path 'C:\1234.txt' is denied.
+At C:\Users\nagaraj.nookala\.jenkins\jobs\SiteInformation\workspace\Storefront\SFDC.ps1:27 char:29
++ $Site1DeliveryController1 | Add-Content C:\1234.txt
++                             ~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : PermissionDenied: (C:\1234.txt:String) [Add-Content], UnauthorizedAccessException
+    + FullyQualifiedErrorId : GetContentWriterUnauthorizedAccessError,Microsoft.PowerShell.Commands.AddContentCommand
+ 
+Add-Content : Access to the path 'C:\1234.txt' is denied.
+At C:\Users\nagaraj.nookala\.jenkins\jobs\SiteInformation\workspace\Storefront\SFDC.ps1:28 char:29
++ $Site1DeliveryController2 | Add-Content C:\1234.txt
++                             ~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : PermissionDenied: (C:\1234.txt:String) [Add-Content], UnauthorizedAccessException
+    + FullyQualifiedErrorId : GetContentWriterUnauthorizedAccessError,Microsoft.PowerShell.Commands.AddContentCommand
+ 
+Add-Content : Access to the path 'C:\1234.txt' is denied.
+At C:\Users\nagaraj.nookala\.jenkins\jobs\SiteInformation\workspace\Storefront\SFDC.ps1:29 char:21
++ $Site2StoreFront1 | Add-Content C:\1234.txt
++                     ~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : PermissionDenied: (C:\1234.txt:String) [Add-Content], UnauthorizedAccessException
+    + FullyQualifiedErrorId : GetContentWriterUnauthorizedAccessError,Microsoft.PowerShell.Commands.AddContentCommand
+ 
+Add-Content : Access to the path 'C:\1234.txt' is denied.
+At C:\Users\nagaraj.nookala\.jenkins\jobs\SiteInformation\workspace\Storefront\SFDC.ps1:30 char:21
++ $Site2StoreFront2 | Add-Content C:\1234.txt
++                     ~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : PermissionDenied: (C:\1234.txt:String) [Add-Content], UnauthorizedAccessException
+    + FullyQualifiedErrorId : GetContentWriterUnauthorizedAccessError,Microsoft.PowerShell.Commands.AddContentCommand
+ 
+Add-Content : Access to the path 'C:\1234.txt' is denied.
+At C:\Users\nagaraj.nookala\.jenkins\jobs\SiteInformation\workspace\Storefront\SFDC.ps1:31 char:29
++ $Site2DeliveryController1 | Add-Content C:\1234.txt
++                             ~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : PermissionDenied: (C:\1234.txt:String) [Add-Content], UnauthorizedAccessException
+    + FullyQualifiedErrorId : GetContentWriterUnauthorizedAccessError,Microsoft.PowerShell.Commands.AddContentCommand
+ 
+Add-Content : Access to the path 'C:\1234.txt' is denied.
+At C:\Users\nagaraj.nookala\.jenkins\jobs\SiteInformation\workspace\Storefront\SFDC.ps1:32 char:29
++ $Site2DeliveryController2 | Add-Content C:\1234.txt
++                             ~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : PermissionDenied: (C:\1234.txt:String) [Add-Content], UnauthorizedAccessException
+    + FullyQualifiedErrorId : GetContentWriterUnauthorizedAccessError,Microsoft.PowerShell.Commands.AddContentCommand
+ 
+Add-Content : Access to the path 'C:\1234.txt' is denied.
+At C:\Users\nagaraj.nookala\.jenkins\jobs\SiteInformation\workspace\Storefront\SFDC.ps1:33 char:24
++ $Site1CitrixSiteName | Add-Content C:\1234.txt
++                        ~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : PermissionDenied: (C:\1234.txt:String) [Add-Content], UnauthorizedAccessException
+    + FullyQualifiedErrorId : GetContentWriterUnauthorizedAccessError,Microsoft.PowerShell.Commands.AddContentCommand
+ 
+Add-Content : Access to the path 'C:\1234.txt' is denied.
+At C:\Users\nagaraj.nookala\.jenkins\jobs\SiteInformation\workspace\Storefront\SFDC.ps1:34 char:24
++ $Site2CitrixSiteName | Add-Content C:\1234.txt
++                        ~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : PermissionDenied: (C:\1234.txt:String) [Add-Content], UnauthorizedAccessException
+    + FullyQualifiedErrorId : GetContentWriterUnauthorizedAccessError,Microsoft.PowerShell.Commands.AddContentCommand
+ 
+Finished: SUCCESS

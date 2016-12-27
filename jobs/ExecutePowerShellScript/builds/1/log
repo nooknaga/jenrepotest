@@ -1,0 +1,28 @@
+Started by upstream project "[8mha:AAAArB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzpEgZF/az8JH3nTKD2inj31LzUssR4/6LkjNTikqLEksz8PH0AvPoG8dYAAAA=[0mCitrix_Geneva_Orchestration" build number [8mha:AAAArB+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLQIwSBiX9rPwkfedMoPaKePfUvNSyxHj/ouSM1OKSosSSzPw8fUMAjdyaCNcAAAA=[0m1
+originally caused by:
+ Started by user [8mha:AAAAlh+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAzOEgYu/dLi1CL9vNKcHACFIKlWvwAAAA==[0manonymous
+[EnvInject] - Loading node environment variables.
+Building in workspace C:\Users\nagaraj.nookala\.jenkins\jobs\ExecutePowerShellScript\workspace
+[workspace] $ powershell.exe -NonInteractive -ExecutionPolicy ByPass "& 'C:\Users\NAGARA~1.NOO\AppData\Local\Temp\hudson692363286243217332.ps1'"
+Add-Content : Access to the path 'C:\1234.txt' is denied.
+At C:\Users\nagaraj.nookala\AppData\Local\Temp\hudson692363286243217332.ps1:2 char:17
++ $env:SitePair | Add-Content C:\1234.txt
++                 ~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : PermissionDenied: (C:\1234.txt:String) [Add-Content], UnauthorizedAccessException
+    + FullyQualifiedErrorId : GetContentWriterUnauthorizedAccessError,Microsoft.PowerShell.Commands.AddContentCommand
+ 
+Add-Content : Access to the path 'C:\1234.txt' is denied.
+At C:\Users\nagaraj.nookala\AppData\Local\Temp\hudson692363286243217332.ps1:3 char:15
++ $env:FIRMID | Add-Content C:\1234.txt
++               ~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : PermissionDenied: (C:\1234.txt:String) [Add-Content], UnauthorizedAccessException
+    + FullyQualifiedErrorId : GetContentWriterUnauthorizedAccessError,Microsoft.PowerShell.Commands.AddContentCommand
+ 
+Add-Content : Access to the path 'C:\1234.txt' is denied.
+At C:\Users\nagaraj.nookala\AppData\Local\Temp\hudson692363286243217332.ps1:4 char:17
++ $env:site1sf2 | Add-Content C:\1234.txt
++                 ~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : PermissionDenied: (C:\1234.txt:String) [Add-Content], UnauthorizedAccessException
+    + FullyQualifiedErrorId : GetContentWriterUnauthorizedAccessError,Microsoft.PowerShell.Commands.AddContentCommand
+ 
+Finished: SUCCESS

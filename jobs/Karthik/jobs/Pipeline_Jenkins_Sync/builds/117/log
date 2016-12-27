@@ -1,0 +1,39 @@
+Started by timer
+[EnvInject] - Loading node environment variables.
+Building remotely on [8mha:AAAAoh+LCAAAAAAAAP9b85aBtbiIQTGjNKU4P08vOT+vOD8nVc83PyU1x6OyILUoJzMv2y+/JJUBAhiZGBgqihhk0NSjKDWzXb3RdlLBUSYGJk8GtpzUvPSSDB8G5tKinBIGIZ+sxLJE/ZzEvHT94JKizLx0a6BxUmjGOUNodHsLgAyeEgYx/eT83ILSktQi/azUvOzMvOKS1OISIwDyWzUiywAAAA==[0mjenkinstest2 (Linux) in workspace /home/jenkins/workspace/Karthik/Pipeline_Jenkins_Sync
+[Pipeline_Jenkins_Sync] $ /bin/bash /tmp/hudson5742665535294963637.sh
+[2016-12-20T23:02:01-05:00] INFO: Forking chef instance to converge...
+[2016-12-20T23:02:01-05:00] INFO: *** Chef 12.5.1 ***
+[2016-12-20T23:02:01-05:00] INFO: Chef-client pid: 21693
+[2016-12-20T23:02:03-05:00] WARN: Run List override has been provided.
+[2016-12-20T23:02:03-05:00] WARN: Original Run List: []
+[2016-12-20T23:02:03-05:00] WARN: Overridden Run List: [recipe[devpipeline_importjobs::default]]
+[2016-12-20T23:02:03-05:00] INFO: Run List is [recipe[devpipeline_importjobs::default]]
+[2016-12-20T23:02:03-05:00] INFO: Run List expands to [devpipeline_importjobs::default]
+[2016-12-20T23:02:03-05:00] INFO: Starting Chef Run for jenkins2
+[2016-12-20T23:02:03-05:00] INFO: Running start handlers
+[2016-12-20T23:02:03-05:00] INFO: Start handlers complete.
+[2016-12-20T23:02:03-05:00] INFO: HTTP Request Returned 404 Not Found: 
+[2016-12-20T23:02:03-05:00] INFO: HTTP Request Returned 412 Precondition Failed: {"message"=>"Run list contains invalid items: no such cookbook devpipeline_importjobs.", "non_existent_cookbooks"=>["devpipeline_importjobs"], "cookbooks_with_no_versions"=>[]}
+[0m
+================================================================================[0m
+[31mError Resolving Cookbooks for Run List:[0m
+================================================================================[0m
+
+[0mMissing Cookbooks:[0m
+------------------[0m
+The following cookbooks are required by the client but don't exist on the server:
+[0m* devpipeline_importjobs
+[0m
+[0m
+[0mExpanded Run List:[0m
+------------------[0m
+* devpipeline_importjobs::default[0m
+
+[0m[2016-12-20T23:02:03-05:00] ERROR: Running exception handlers
+[2016-12-20T23:02:03-05:00] ERROR: Exception handlers complete
+[2016-12-20T23:02:03-05:00] FATAL: Stacktrace dumped to /var/chef/cache/chef-stacktrace.out
+[2016-12-20T23:02:03-05:00] ERROR: 412 "Precondition Failed"
+[2016-12-20T23:02:03-05:00] FATAL: Chef::Exceptions::ChildConvergeError: Chef run process exited unsuccessfully (exit code 1)
+Build step 'Execute shell' marked build as failure
+Finished: FAILURE

@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<hudson.maven.MavenBuild plugin="maven-plugin@2.7.1">
+  <queueId>-1</queueId>
+  <timestamp>1464662042872</timestamp>
+  <startTime>0</startTime>
+  <duration>0</duration>
+  <keepLog>false</keepLog>
+  <builtOn></builtOn>
+  <workspace>D:\Preparation\SeleniumAutomation\SeleniumWorkSpace\TestCucumber</workspace>
+</hudson.maven.MavenBuild>

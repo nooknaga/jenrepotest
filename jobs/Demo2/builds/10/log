@@ -1,0 +1,30 @@
+Started by an SCM change
+Started by an SCM change
+[EnvInject] - Loading node environment variables.
+Building in workspace C:\Users\nagaraj.nookala\.jenkins\jobs\Demo2\workspace
+ > C:\Program Files\Git\mingw64\libexec\git-core\git.exe rev-parse --is-inside-work-tree # timeout=10
+Fetching changes from the remote Git repository
+ > C:\Program Files\Git\mingw64\libexec\git-core\git.exe config remote.origin.url https://github.com/nooknaga/Jenkins.git # timeout=10
+Fetching upstream changes from https://github.com/nooknaga/Jenkins.git
+ > C:\Program Files\Git\mingw64\libexec\git-core\git.exe --version # timeout=10
+using .gitcredentials to set credentials
+ > C:\Program Files\Git\mingw64\libexec\git-core\git.exe config --local credential.username nookala.nagaraj@gmail.com # timeout=10
+ > C:\Program Files\Git\mingw64\libexec\git-core\git.exe config --local credential.helper store --file=\"C:\Users\NAGARA~1.NOO\AppData\Local\Temp\git1647179591483095808.credentials\" # timeout=10
+ > C:\Program Files\Git\mingw64\libexec\git-core\git.exe -c core.askpass=true fetch --tags --progress https://github.com/nooknaga/Jenkins.git +refs/heads/*:refs/remotes/origin/*
+ > C:\Program Files\Git\mingw64\libexec\git-core\git.exe config --local --remove-section credential # timeout=10
+ > C:\Program Files\Git\mingw64\libexec\git-core\git.exe rev-parse "refs/remotes/origin/master^{commit}" # timeout=10
+ > C:\Program Files\Git\mingw64\libexec\git-core\git.exe rev-parse "refs/remotes/origin/origin/master^{commit}" # timeout=10
+Checking out Revision e85084a5d83da307aeb9ce83782169cc72c7e023 (refs/remotes/origin/master)
+ > C:\Program Files\Git\mingw64\libexec\git-core\git.exe config core.sparsecheckout # timeout=10
+ > C:\Program Files\Git\mingw64\libexec\git-core\git.exe checkout -f e85084a5d83da307aeb9ce83782169cc72c7e023
+ > C:\Program Files\Git\mingw64\libexec\git-core\git.exe rev-list d8b4923fa97271fd1a2e101ab1f052ade4ed1dde # timeout=10
+[workspace] $ cmd /c call C:\Users\NAGARA~1.NOO\AppData\Local\Temp\hudson6718140900755278254.bat
+
+C:\Users\nagaraj.nookala\.jenkins\jobs\Demo2\workspace>javac Helloworld.java 
+
+C:\Users\nagaraj.nookala\.jenkins\jobs\Demo2\workspace>java Helloworld 
+Error: Could not find or load main class Helloworld
+
+C:\Users\nagaraj.nookala\.jenkins\jobs\Demo2\workspace>exit 1 
+Build step 'Execute Windows batch command' marked build as failure
+Finished: FAILURE

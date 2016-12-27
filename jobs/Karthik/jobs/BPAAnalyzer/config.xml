@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<project>
+  <actions/>
+  <description></description>
+  <keepDependencies>false</keepDependencies>
+  <properties>
+    <hudson.model.ParametersDefinitionProperty>
+      <parameterDefinitions>
+        <hudson.model.StringParameterDefinition>
+          <name>vmname</name>
+          <description>Name of the machine on which BPA anlyzer has to be set.</description>
+          <defaultValue></defaultValue>
+        </hudson.model.StringParameterDefinition>
+        <hudson.model.StringParameterDefinition>
+          <name>username</name>
+          <description>user name of the machine on which BPA analyzer has to be set</description>
+          <defaultValue></defaultValue>
+        </hudson.model.StringParameterDefinition>
+        <hudson.model.PasswordParameterDefinition>
+          <name>password</name>
+          <description>Password for the machine where BPA Analyzer has to be run</description>
+          <defaultValue>KcCraR8Y3aE8p3uVOYVnPQ==</defaultValue>
+        </hudson.model.PasswordParameterDefinition>
+      </parameterDefinitions>
+    </hudson.model.ParametersDefinitionProperty>
+  </properties>
+  <scm class="hudson.scm.NullSCM"/>
+  <canRoam>true</canRoam>
+  <disabled>false</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <triggers/>
+  <concurrentBuild>false</concurrentBuild>
+  <builders>
+    <hudson.plugins.powershell.PowerShell plugin="powershell@1.3">
+      <command>
+$pass = ConvertTo-SecureString -AsPlainText $env:password -Force
+$Cred = New-Object System.Management.Automation.PSCredential -ArgumentList $env:username,$pass
+
+Invoke-command -ComputerName $env:vmname -Credential $Cred -ScriptBlock {Invoke-BpaModel Microsoft/Windows/WebServer }
+
+Invoke-command -ComputerName $env:vmname -Credential $Cred -ScriptBlock {Invoke-BpaModel Microsoft/Windows/ApplicationServer }
+Invoke-command -ComputerName $env:vmname -Credential $Cred -ScriptBlock {Get-BpaResult -id Microsoft/windows/webserver }
+Invoke-command -ComputerName $env:vmname -Credential $Cred -ScriptBlock {Get-BpaResult -id Microsoft/windows/ApplicationServer }</command>
+    </hudson.plugins.powershell.PowerShell>
+  </builders>
+  <publishers/>
+  <buildWrappers/>
+</project>
